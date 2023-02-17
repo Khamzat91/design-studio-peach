@@ -1,0 +1,30 @@
+@import "./vars";
+@import "./fonts";
+@import "./global";
+
+// header start
+.header{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 70px;
+        &-list{
+            display: flex;
+&__link{
+    cursor: pointer;
+    &+&{
+        margin-left: 20px;
+    }
+}
+        }
+    }
+}
+
+
+// header end
+
+// banner start
+
+
+// banner end
