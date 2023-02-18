@@ -61,16 +61,70 @@
 
 //about start
 .about {
-  max-width: 1110px;
+  max-width: 1130px;
   width: 100%;
   padding: 99px 110px;
-  &__title{
-    max-width: 890px;
-  width: 100%;
+  margin-bottom: 100px;
+  &__title {
     font-size: 32px;
     line-height: 32px;
     color: $bg;
+    text-align: center;
+    span {
+      color: #b01736;
+    }
   }
 }
 
 //about end
+
+//numbers start
+.numbers {
+  max-width: 889px;
+  width: 100%;
+  margin-bottom: 100px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    &-info {
+      font-size: 80px;
+      line-height: 64px;
+      color: #A30C33;
+      @include f600;
+      &+&{
+        margin-left: 185px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 27px;
+        display: block;
+        max-width: 240px;
+        color: $bg;
+        width: 100%;
+        @include f400;
+      }
+    }
+    &-personal{
+        font-size: 80px;
+        line-height: 64px;
+        margin-top: 80px;
+        margin-left: 147px;
+        color: #A30C33;
+        @include f600;
+        &+&{
+            margin-left: 180px;   
+        }
+        span {
+            font-size: 18px;
+            line-height: 27px;
+            display: block;
+            max-width: 240px;
+            width: 100%;
+            color: $bg;
+            @include f400;
+          }
+    }
+  }
+}
+
+//numbers end
