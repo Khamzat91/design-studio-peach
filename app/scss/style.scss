@@ -3,28 +3,74 @@
 @import "./global";
 
 // header start
-.header{
-    &__inner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px 70px;
-        &-list{
-            display: flex;
-&__link{
-    cursor: pointer;
-    &+&{
-        margin-left: 20px;
-    }
-}
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    &-list {
+      display: flex;
+      &__link {
+        cursor: pointer;
+        color: $bg;
+        @include f600;
+        & + & {
+          margin-left: 20px;
         }
+      }
     }
+  }
 }
-
 
 // header end
 
 // banner start
-
+.banner {
+  &__image {
+    height: 600px;
+    background-image: url(../images/banner.png);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 158px 70px;
+    margin-bottom: 100px;
+  }
+  &__title {
+    color: $bg;
+    font-size: 56px;
+    line-height: 56px;
+    @include f600;
+    max-width: 850px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  &__btn {
+    max-width: 116px;
+    width: 100%;
+    padding: 18px 28px;
+    text-align: center;
+    background-color: #b01736;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+}
 
 // banner end
+
+//about start
+.about {
+  max-width: 1110px;
+  width: 100%;
+  padding: 99px 110px;
+  &__title{
+    max-width: 890px;
+  width: 100%;
+    font-size: 32px;
+    line-height: 32px;
+    color: $bg;
+  }
+}
+
+//about end
