@@ -1,68 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
-  <body>
-    <header class="header container">
-      <div class="header__inner">
-        <a class="header__inner-logo" href="#">
-          <img src="../images/logo.png" alt="logo" />
-        </a>
-        <ul class="header__inner-list">
-          <li class="header__inner-list__link">Облачные решения</li>
-          <li class="header__inner-list__link">Кибербезопасность</li>
-          <li class="header__inner-list__link">Импортозамещение</li>
-          <li class="header__inner-list__link">Цифровая трансформация</li>
-        </ul>
-      </div>
-    </header>
-    <section class="banner container">
-      <div class="banner__image">
-        <div class="banner__title">
-          Поставщик услуг цифровой
-          <div>трансформации</div>
-          и кибербезопасности
-        </div>
-        <div class="banner__btn">На сайт</div>
-      </div>
-    </section>
-    <section class="about container">
-      <div class="about__title">
-        <span>Softline</span> – ведущий поставщик IT-решений и сервисов.*
-        <div>Мы предлагаем комплексные IT-решения, облака, программное</div>
-        <div>и аппаратное обеспечение, решения по цифровой трансформации</div>
-        и кибербезопасности, а также широкий спектр IT-услуг.
-      </div>
-    </section>
-    <section class="numbers container">
-      <ul class="numbers__list">
-        <li class="numbers__list-info">
-          > 30 лет
-          <span>на IT-рынке</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <header class="header container">
+    <div class="header__inner">
+      <a class="header__inner-logo" href="#">
+        <img src="../images/logo.png" alt="logo" />
+      </a>
+      <ul class="header__inner-list">
+        <li class="header__inner-list__link">
+          Облачные решения
         </li>
-        <li class="numbers__list-info">
-          4600
-          <span>сотрудников в России</span>
+        <li class="header__inner-list__link">
+          Кибербезопасность</a>
         </li>
-        <li class="numbers__list-info">
-          25
-          <span>городов России</span>
+        <li class="header__inner-list__link">
+          Импортозамещение
         </li>
-        <li class="numbers__list-personal">
-          2000 +
-          <span>разработчиков</span>
-        </li>
-        <li class="numbers__list-personal">
-          3000 +
-          <span> сотрудников ежегодно проходят оценку и обучение </span>
+        <li class="header__inner-list__link">
+          Цифровая трансформация
         </li>
       </ul>
-    </section>
-    <script src="js/header.min.js"></script>
-  </body>
+    </div>
+  </header>
+  <section class="banner container">
+    <div class="banner__image">
+      <div class="banner__title">
+        Поставщик услуг цифровой
+        <div>трансформации</div>
+        и кибербезопасности
+      </div>
+      <div class="banner__btn">На сайт</div>
+    </div>
+  </section>
+  <section class="about container">
+    <div class="about__title">
+      <span>Softline</span> – ведущий поставщик IT-решений и сервисов.*
+      <div>Мы предлагаем комплексные IT-решения, облака, программное</div>
+      <div>и аппаратное обеспечение, решения по цифровой трансформации</div>
+      и кибербезопасности, а также широкий спектр IT-услуг.
+    </div>
+  </section>
+  <section class="numbers container">
+    <ul class="numbers__list">
+      <li class="numbers__list-info">
+        > 30 лет
+        <span>на IT-рынке</span>
+      </li>
+      <li class="numbers__list-info">
+        4600
+        <span>сотрудников в России</span>
+      </li>
+      <li class="numbers__list-info">
+        25
+        <span>городов России</span>
+      </li>
+
+      <li class="numbers__list-personal">
+        2000 +
+        <span>разработчиков</span>
+      </li>
+      <li class="numbers__list-personal">
+        3000 +
+        <span> сотрудников ежегодно проходят оценку и обучение </span>
+      </li>
+    </ul>
+  </section>
+  <section class="map container">
+    <div class="map__inner">
+      <div class="map__inner-tabs">
+        <div class="map__inner-tabs__fold">
+          Офисы Softline
+        </div>
+        <ul class="map__inner-tabs__list">
+          <li id="all" class="map__inner-tabs__area active">
+            Все
+          </li>
+          <li id="moscow" class="map__inner-tabs__area">
+            Москва
+          </li>
+          <li id="center" class="map__inner-tabs__area">
+            Центр
+          </li>
+          <li id="northwest" class="map__inner-tabs__area">
+            Северо-Запад
+          </li>
+          <li id="south" class="map__inner-tabs__area">
+            Юг
+          </li>
+          <li id="volga" class="map__inner-tabs__area">
+            Волга
+          </li>
+          <li id="urals" class="map__inner-tabs__area">
+            Урал
+          </li>
+          <li id="siberia" class="map__inner-tabs__area">
+            Сибирь
+          </li>
+          <li id="fareast" class="map__inner-tabs__area">
+            Дальний восток
+          </li>
+        </ul>
+        <ul class="map__inner-tabs__items dn">
+          <li id="moscow" class="map__inner-tabs__item">
+            Москва
+          </li>
+          <li id="center" class="map__inner-tabs__item">
+            Центр
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Воронеж</div>
+              <div class="map__inner-tabs__city">Ярославль</div>
+              <div class="map__inner-tabs__city">Белгород</div>
+            </div>
+          </li>
+          <li id="northwest" class="map__inner-tabs__item">
+            Северо-Запад
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Санкт-Петербург</div>
+              <div class="map__inner-tabs__city">Калининград</div>
+            </div>
+          </li>
+          <li id="south" class="map__inner-tabs__item">
+            Юг
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Ростов-на-Дону</div>
+              <div class="map__inner-tabs__city">Краснодар</div>
+              <div class="map__inner-tabs__city">Волгоград</div>
+            </div>
+          </li>
+          <li id="volga" class="map__inner-tabs__item">
+            Волга
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Казань</div>
+              <div class="map__inner-tabs__city">Самара</div>
+              <div class="map__inner-tabs__city">Уфа</div>
+              <div class="map__inner-tabs__city">Оренбург</div>
+              <div class="map__inner-tabs__city">Нижний Новгород</div>
+            </div>
+          </li>
+          <li id="urals" class="map__inner-tabs__item">
+            Урал
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Екатеринбург</div>
+              <div class="map__inner-tabs__city">Челябинск</div>
+              <div class="map__inner-tabs__city">Пермь</div>
+              <div class="map__inner-tabs__city">Сургут</div>
+              <div class="map__inner-tabs__city">Тюмень</div>
+              <div class="map__inner-tabs__city">Ижевск</div>
+            </div>
+          </li>
+          <li id="siberia" class="map__inner-tabs__item">
+            Сибирь
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Новосибирск</div>
+              <div class="map__inner-tabs__city">Омск</div>
+              <div class="map__inner-tabs__city">Томск</div>
+              <div class="map__inner-tabs__city">Красноярск</div>
+              <div class="map__inner-tabs__city">Иркутск</div>
+            </div>
+          </li>
+          <li id="fareast" class="map__inner-tabs__item">
+            Дальний восток
+            <div class="map__inner-tabs__citys">
+              <div class="map__inner-tabs__city">Хабаровск</div>
+              <div class="map__inner-tabs__city">Владивосток</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="map__inner-scope">
+        <img class="map__inner-scope__map-img" src="./images/map-all.png">
+      </div>
+    </div>
+  </section>
+  <section class="mission container">
+    <div class="mission__image">
+      <div class="mission__inner">
+        <div class="mission__inner-title">
+          Миссия Softline
+        </div>
+        <div class="mission__inner-description">
+          Мы помогаем организациям трансформироваться, работать эффективно и безопасно в условиях цифровой экономики.
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="business container">
+    <div class="business__title">Направления бизнеса</div>
+    <div class="business__lines">
+      <div class="business__lines-image">
+        <div class="business__lines-content">
+
+        </div>
+        <div class="business__lines-image">
+          <img src="./images/business/business1.jpg" alt="">
+          <div class="business__lines-content">
+            Решения Softline
+          </div>
+          <div class="business__lines-line">
+            <div class="business__lines-title">Решения Softline</div>
+            <div class="business__lines-text">
+              ГК Softline предлагает клиентам собственную линейку оборудования (ПК,
+              серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в
+              области информационной безопасности.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="business__lines-image">
+        <img src="./images/business/business2.jpg" alt="">
+        <div class="business__lines-content">
+          Кибербезопасность
+        </div>
+        <div class="business__lines-line">
+          <div class="business__lines-title">Кибербезопасность</div>
+          <div class="business__lines-text">
+            Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной
+            безопасности и аттестации.
+          </div>
+        </div>
+      </div>
+
+      <div class="business__lines-image">
+        <img src="./images/business/business3.jpg" alt="">
+        <div class="business__lines-content">
+          Импортозамещение
+        </div>
+        <div class="business__lines-line">
+          <div class="business__lines-title">Импортозамещение</div>
+          <div class="business__lines-text">
+            ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование
+            собственного производства.
+          </div>
+        </div>
+      </div>
+
+      <div class="business__lines-image">
+        <img src="./images/business/business4.jpg" alt="">
+        <div class="business__lines-content">
+          Облачные решения
+        </div>
+        <div class="business__lines-line">
+          <div class="business__lines-title">Облачные решения</div>
+          <div class="business__lines-text">
+            Softline использует современные облачные решения как российских, так и международных вендоров для
+            масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.
+          </div>
+        </div>
+      </div>
+      <div class="business__lines-image">
+        <img src="./images/business/business5.jpg" alt="">
+        <div class="business__lines-content">
+          Цифровая трансформация
+          и разработка ПО
+        </div>
+        <div class="business__lines-line">
+          <div class="business__lines-title">
+            Цифровая трансформация
+            и разработка ПО
+          </div>
+          <div class="business__lines-text">
+            Softline использует современные технологи и новые возможности для увеличения производительности бизнеса
+            заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного
+            предприятия.
+          </div>
+        </div>
+      </div>
+      <div class="business__lines-image">
+        <img src="./images/business/business6.jpg" alt="">
+        <div class="business__lines-content">
+          Техническая поддержка Softline
+        </div>
+        <div class="business__lines-line">
+          <div class="business__lines-title">Техническая поддержка Softline</div>
+          <div class="business__lines-text">
+            200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми
+            производителями.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="benefits container">
+    <div class="benefits__title">
+      Компенсационный пакет
+    </div>
+    <div class="benefits__servis">
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits1.svg" alt="">
+        <div class="benefits__servis-text">
+          Дмс
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits2.svg" alt="">
+        <div class="benefits__servis-text">
+          Выходной в день рождения
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits3.svg" alt="">
+        <div class="benefits__servis-text">
+          Корпоративная мобильная связь
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits4.svg" alt="">
+        <div class="benefits__servis-text">
+          Корпоративные скидки на спорт
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits5.svg" alt="">
+        <div class="benefits__servis-text">
+          LTI
+        </div>
+      </div>
+    </div>
+    <div class="benefits__subtitle">
+      Программа дополнительной мотивации
+      <span>доплата 12% от суммы</span>
+    </div>
+    <div class="benefits__servis">
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits6.svg" alt="">
+        <div class="benefits__servis-text">
+          Оргтехники
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits1.svg" alt="">
+        <div class="benefits__servis-text">
+          ДМС
+        </div>
+      </div>
+      <div class="benefits__servis-packet">
+        <img class="benefits__servis-image" src="./images/benefits/benefits7.svg" alt="">
+        <div class="benefits__servis-text">
+          Ипотеки
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/header.min.js"></script>
+</body>
+
 </html>
