@@ -10,6 +10,20 @@ const fold = document.querySelector(".map__inner-tabs__fold");
 const items = document.querySelector(".map__inner-tabs__items");
 
 
+
+ new Swiper('.mySwiper' , {
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
 tabs.onclick = (e) => {
   mapImg.src = `./images/map-${e.target.id}.png`;
   console.log(tabsAll);

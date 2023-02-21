@@ -26,6 +26,8 @@
 
 // banner start
 .banner {
+  max-width: 1250px;
+  object-fit: cover;
   &__image {
     background-image: url(../images/banner.png);
     background-position: 0 0;
@@ -77,44 +79,23 @@
 //numbers start
 .numbers {
   max-width: 889px;
-  width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   &__list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     &-info {
+      max-width: 260px;
       font-size: 80px;
       line-height: 64px;
       color: #a30c33;
       @include f600;
-      & + & {
-        margin-left: 179px;
-      }
+      text-align: end;
+      margin-bottom: 80px;
       span {
         font-size: 18px;
         line-height: 27px;
         display: block;
-        max-width: 240px;
-        width: 100%;
-        @include f400;
-      }
-    }
-    &-personal {
-      font-size: 80px;
-      line-height: 64px;
-      margin-top: 80px;
-      margin-left: 147px;
-      color: #a30c33;
-      @include f600;
-      & + & {
-        margin-left: 180px;
-      }
-      span {
-        font-size: 18px;
-        line-height: 27px;
-        display: block;
-        max-width: 240px;
-        width: 100%;
         @include f400;
       }
     }
@@ -122,7 +103,7 @@
 }
 
 //numbers end
-//tab start
+//map start
 .map {
   padding: 0 30px;
   margin-bottom: 100px;
@@ -135,6 +116,7 @@
       transition: all 0.35s;
       position: relative;
       &__fold {
+        max-width: 147px;
         font-size: 24px;
         line-height: 24px;
         position: relative;
@@ -192,6 +174,7 @@
         top: 70px;
         background-color: #fff;
         z-index: 2;
+
         transition: all 0.5s;
       }
       &__item {
@@ -204,7 +187,6 @@
     }
     &-scope__map-img {
       max-width: 1190px;
-      width: 100%;
       transition: all 0.5s ease-in-out;
       &.opacity {
         opacity: 0.3;
@@ -214,7 +196,7 @@
   }
 }
 
-//tab end
+//map end
 //mission start
 .mission {
   text-align: center;
@@ -227,7 +209,6 @@
   }
   &__inner {
     max-width: 1110px;
-    width: 100%;
     margin-left: 68px;
     text-align: center;
     padding-top: 140px;
@@ -251,6 +232,25 @@
 
 //mission end
 //business start
+.bgi1 {
+  background-image: url("../images/business/business1.jpg");
+}
+.bgi2 {
+  background-image: url("../images/business/business2.jpg");
+}
+.bgi3 {
+  background-image: url("../images/business/business3.jpg");
+}
+.bgi4 {
+  background-image: url("../images/business/business4.jpg");
+}
+.bgi5 {
+  background-image: url("../images/business/business5.jpg");
+}
+.bgi6 {
+  background-image: url("../images/business/business6.jpg");
+}
+
 .business {
   margin-bottom: 100px;
   &__title {
@@ -272,10 +272,10 @@
       display: block;
       background-position: center;
       background-size: contain;
-      img {
-        max-width: 615px;
-        width: 100%;
-      }
+      max-width: 615px;
+      width: 100%;
+      height: 265px;
+
       &:hover {
         .business__lines-content {
           display: none;
@@ -344,16 +344,13 @@
     padding: 31px 34px 0;
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     align-items: center;
     margin: 0 auto;
     margin-bottom: 80px;
     &-packet {
       max-width: 178px;
-      width: 100%;
       text-align: center;
-      & + & {
-        margin-left: 17px;
-      }
     }
   }
   &__subtitle {
@@ -378,12 +375,12 @@
 .gallery {
   padding: 0 70px 100px;
   &__inner {
+    margin: 0 auto;
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
     max-width: 1110px;
-    width: 100%;
-    &-box{
+    &-box {
       display: flex;
       justify-content: space-between;
     }
@@ -393,7 +390,7 @@
     font-size: 56px;
     @include f600;
   }
-  .swiper-button-next{
+  .swiper-button-next {
     margin-left: 20px;
   }
   .swiper-button-next,
@@ -409,7 +406,7 @@
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
-    content: '';
+    content: "";
     width: 0;
     height: 0;
   }
@@ -460,3 +457,9 @@
 }
 
 //gallery end
+
+
+
+
+
+@import "./media.scss";
