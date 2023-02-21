@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -352,37 +354,59 @@
     </div>
   </section>
   <section class="gallery container">
-    <div class="gallery_title">
+    <div class="gallery__inner">
+       <div class="gallery_title">
       Корпоративная жизнь
     </div>
-    <div class="gallery__slider">
-      <div class="gallery__slider-btn">
-        <img src="./images/content/slider-prev.svg" alt="" class="gallery__slider-btn__prev">
-        <img src="./images/content/slider-next.svg" alt="" class="gallery__slider-btn__next">
+    <div class="gallery__inner-box">
+      <div class="swiper-button-prev">
+        <img src="./images/content/slider-next.svg" alt="">
       </div>
-      <div class="gallery__slider-carousel">
-       <div class="gallery__slider-carousel__image">
-        <img src="./images/slider/slider1.png" alt="">
-       </div> 
-      <div class="gallery__slider-carousel">
-       <div class="gallery__slider-carousel__image">
-        <img src="./images/slider/slider2.png" alt="">
-       </div> 
-      <div class="gallery__slider-carousel">
-       <div class="gallery__slider-carousel__image">
-        <img src="./images/slider/slider3.png" alt="">
-       </div> 
-      <div class="gallery__slider-carousel">
-       <div class="gallery__slider-carousel__image">
-        <img src="./images/slider/slider4.png" alt="">
-       </div> 
-      <div class="gallery__slider-carousel">
-       <div class="gallery__slider-carousel__image">
-        <img src="./images/slider/slider5.png" alt="">
-       </div> 
+      <div class="swiper-button-next">
+        <img src="./images/content/slider-prev.svg" alt="">
       </div>
     </div>
+    </div>
+    <div class="gallery__wrapper">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="gallery__swiper-slide__image" src="./images/slider/slider1.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__swiper-slide__image" src="./images/slider/slider2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__swiper-slide__image" src="./images/slider/slider3.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__swiper-slide__image" src="./images/slider/slider4.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__swiper-slide__image" src="./images/slider/slider5.png" alt="">
+        </div>
+      </div>
+    </div>
+      <div class="swiper-pagination"></div>
+  </div>
+
   </section>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination"
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+  
   <script src="js/header.min.js"></script>
 </body>
 

@@ -88,7 +88,7 @@
       color: #a30c33;
       @include f600;
       & + & {
-        margin-left: 185px;
+        margin-left: 179px;
       }
       span {
         font-size: 18px;
@@ -366,10 +366,97 @@
     width: 100%;
     text-align: center;
     @include f600;
-    span{
-      color: #B01736;
+    span {
+      color: #b01736;
     }
   }
 }
 
 //benefits end
+//gallery start
+
+.gallery {
+  padding: 0 70px 100px;
+  &__inner {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1110px;
+    width: 100%;
+    &-box{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_title {
+    line-height: 56px;
+    font-size: 56px;
+    @include f600;
+  }
+  .swiper-button-next{
+    margin-left: 20px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative !important;
+    width: 56px;
+    height: 56px;
+    background: #f0f0f0;
+    border-radius: 64.2857px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    outline: none;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: '';
+    width: 0;
+    height: 0;
+  }
+
+  .swiper {
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    object-fit: cover;
+  }
+  .swiper-pagination {
+    position: relative;
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+  }
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -40px;
+    max-width: 1110px;
+    width: 100%;
+  }
+  .swiper-pagination-bullet {
+    width: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 214px)
+    );
+    height: var(
+      --swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 6px)
+    );
+    border-radius: 0;
+
+    background: var(
+      --swiper-pagination-bullet-inactive-color,
+      rgb(0, 0, 0, 0.5)
+    );
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-inactive-color, #a30c33);
+  }
+}
+
+//gallery end
