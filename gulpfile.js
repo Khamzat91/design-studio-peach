@@ -19,7 +19,7 @@ function cleanDist() {
 }
 
 function scripts() {
-  return src(["app/js/header.js"])
+  return src(["app/js/header.js", 'node_modules/slick-carousel/slick/slick.js'])
     .pipe(concat("header.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -27,7 +27,7 @@ function scripts() {
 }
 
 function styles() {
-  return src(["app/scss/style.scss", "node_modules/normalize.css/normalize.css"])
+  return src(["app/scss/style.scss", "node_modules/normalize.css/normalize.css", 'node_modules/slick-carousel/slick/slick.css'])
     .pipe(sass({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))
     .pipe(
