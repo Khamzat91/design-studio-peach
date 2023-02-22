@@ -4,6 +4,7 @@ const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
+const ghPages = require('gulp-gh-pages')
 const del = require("del");
 
 function browsersync() {
@@ -46,11 +47,18 @@ function build() {
     [
       "app/css/style.min.css",
       "app/fonts/**/*",
+      "app/images/**/*",
       "app/js/header.min.js",
       "app/*.html",
+
     ],
     { base: "app" }
   ).pipe(dest("dist"));
+}
+
+function deploy() {
+  return src('./dist/**/*')
+  .pipe(ghPages())
 }
 
 function watching() {
@@ -64,7 +72,10 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.cleanDist = cleanDist;
+exports.deploy = deploy
 
 
-exports.build = series(cleanDist, build);
+exports.build = series(cleanDist, build, deploy);
 exports.default = parallel(styles, scripts, browsersync, watching);
+
+
