@@ -49,6 +49,9 @@
 }
 
 @media (max-width: 900px) {
+  .business__lines-image {
+    width: 100%;
+  }
   .about__title {
     font-size: 24px;
     line-height: 24px;
@@ -65,7 +68,6 @@
   }
   .benefits__servis {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
   .benefits__subtitle {
     font-size: 30px;
@@ -93,6 +95,7 @@
   }
   .header__inner-list {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .header__inner-list__link {
     &:nth-child(2n) {
@@ -104,6 +107,17 @@
   }
   .gallery {
     padding: 0 0 100px;
+  }
+  .numbers__list {
+    justify-content: space-between;
+  }
+  .numbers__list-info {
+    & + & {
+      margin-left: 130px;
+    }
+    span {
+      text-align: center;
+    }
   }
 }
 @media (max-width: 750px) {
@@ -149,16 +163,119 @@
       line-height: 22px;
     }
   }
+  .numbers__list-info {
+    & + & {
+      margin-left: 0;
+    }
+  }
   .header__inner-list__link {
     font-size: 15px;
     line-height: 22px;
   }
   .benefits__servis {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .map__inner-scope__map-img {
     max-width: 1190px;
+  }
+  .business__lines {
+    display: none;
+  }
+
+  .business__linesad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .business__lines-imagead {
+    position: relative;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 60px;
+    margin: 0 5px 10px;
+
+    &.active {
+      height: 240px;
+      .business__lines-contentad {
+        display: none;
+      }
+      .business__lines-linead {
+        height: 260px;
+      }
+      .business__lines-imagead {
+        height: 260px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/content/businessarrow.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        top: 27px;
+        right: 17px;
+        width: 22px;
+        height: 13px;
+        transform: rotate(180deg);
+        cursor: pointer;
+      }
+     
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/content/businessarrow.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      top: 27px;
+      right: 17px;
+      width: 22px;
+      height: 13px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  .business__lines-contentad {
+    position: absolute;
+    padding: 18px 20px;
+    background-color: rgba(45, 54, 83, 0.6);
+    color: #fff;
+    width: 100%;
+    bottom: 0px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    @include f600;
+  }
+  .business__lines-linead {
+    position: absolute;
+    padding: 0px;
+    background-color: rgba(45, 54, 83, 0.6);
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+    top: 0px;
+  }
+  .business__lines-titlead {
+    font-size: 24px;
+    line-height: 24px;
+    @include f600;
+    color: #fff;
+    margin: 28px 20px 20px;
+  }
+  .business__lines-textad {
+    max-width: 480px;
+    width: 100%;
+    font-size: 17px;
+    line-height: 23px;
+    color: #fff;
+    margin-left: 20px;
   }
 }
 @media (max-width: 590px) {
@@ -192,7 +309,7 @@
   .mission,
   .business,
   .about {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .container {
     margin-left: 10px;
@@ -209,11 +326,56 @@
   .mission__inner-title {
     margin-bottom: 10px;
   }
- 
+  .benefits__servis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header__inner-list__link {
+    line-height: 15px;
+  }
+  .header__inner {
+    padding: 30px 33px;
+  }
+  .banner__image {
+    padding: 30px 25px;
+  }
+  .about__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .business__lines-contentad {
+    font-size: 17px;
+  }
+  .business__lines-contentad {
+    font-size: 14px;
+    line-height: 15px;
+    padding: 23px 20px;
+    &.bus{
+      padding: 15px 32px 15px 20px;
+    }
+  }
+  .business__lines-titlead{
+    font-size: 17px;
+    line-height: 20px;
+  margin: 28px 0 20px;
+  }
+  .business__lines-textad {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 0px;
+}
+.business__lines-linead{
+  padding: 0 10px;
+}
 }
 
-@media (max-width: 350px) {
-    .benefits__servis{
-        padding: 0;
-      }
+@media (max-width: 385px) {
+  .benefits__servis {
+    padding: 0;
+  }
+  .header__inner {
+    padding: 30px 5px;
+  }
+  .header__inner-list__link {
+    font-size: 13px;
+  }
 }

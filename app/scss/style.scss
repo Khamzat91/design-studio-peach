@@ -82,7 +82,7 @@
   margin-bottom: 20px;
   &__list {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     &-info {
       max-width: 260px;
@@ -90,13 +90,15 @@
       line-height: 64px;
       color: #a30c33;
       @include f600;
-      text-align: end;
+      // text-align: end;
       margin-bottom: 80px;
+      &+&{margin-left: 179px;}
       span {
         font-size: 18px;
         line-height: 27px;
         display: block;
         @include f400;
+        text-align: start;
       }
     }
   }
@@ -273,7 +275,6 @@
       background-position: center;
       background-size: contain;
       max-width: 615px;
-      width: 100%;
       height: 265px;
 
       &:hover {
@@ -323,6 +324,7 @@
       margin-left: 20px;
     }
   }
+  
 }
 
 //business end

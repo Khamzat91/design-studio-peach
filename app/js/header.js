@@ -9,6 +9,8 @@ const fold = document.querySelector(".map__inner-tabs__fold");
 
 const items = document.querySelector(".map__inner-tabs__items");
 
+const image = document.querySelector('.business__lines-adap');
+
 
 
  new Swiper('.mySwiper' , {
@@ -26,12 +28,15 @@ const items = document.querySelector(".map__inner-tabs__items");
 
 tabs.onclick = (e) => {
   mapImg.src = `./images/map-${e.target.id}.png`;
-  console.log(tabsAll);
   for (let i = 0; i < tabsAll.length; i++) {
     tabsAll[i].classList.remove("active");
   }
   e.target.classList.add("active");
 };
+
+image.onclick = (e) => {
+  e.target.classList.toggle("active");
+}
 
 fold.onclick = () => {
   fold.classList.toggle("active");
